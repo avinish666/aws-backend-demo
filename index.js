@@ -80,7 +80,11 @@ function startServer() {
     .then(() => console.log("MongoDB connected!"))
     .catch((err) => console.error("Unable to connect : ", err));
 
-  app.use(cors({ origin: "*" }));
+
+app.use(cors({
+  origin: "https://main.d37qriginjyi46.amplifyapp.com",
+  credentials: true
+}));
 
   app.use("/", mainRouter);
 
