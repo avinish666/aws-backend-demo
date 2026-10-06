@@ -110,7 +110,7 @@ function startServer() {
     // CRUD operations
   });
 
-  httpServer.listen(port, () => {
-    console.log(`Server is running on PORT ${port}`);
-  });
+ httpServer.listen(port, "0.0.0.0", () => {
+  console.log(`Server is running on PORT ${port}`);
+});
 }
